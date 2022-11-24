@@ -24,7 +24,7 @@ let [data,setdata]= useState({
 let handleSubmit=(e)=>{
 e.preventDefault()
 console.log(data,"payload")
-fetch("http://localhost:8080/user/register",{
+fetch("https://unfinance1234.herokuapp.com/user/register",{
   method:"POST",
   headers:{"Content-Type":"application/json"},
   body:JSON.stringify(data)
