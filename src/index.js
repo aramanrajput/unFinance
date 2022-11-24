@@ -6,10 +6,9 @@ let connect = require("./config/db")
 
 let upload = require("./middlewares/upload")
 
-
+app.use(express.json())
 app.use("/user",userController)
 app.use("/store",upload.single("file"),dataController)
-
 
 
 

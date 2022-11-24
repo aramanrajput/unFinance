@@ -6,7 +6,7 @@ let bcrypt = require("bcryptjs")
 let jwt = require("jsonwebtoken")
 router.post("/register",async(req,res)=>{
 try{
-
+console.log(req.body)
     //find if user exist or not
 let user = await User.findOne({email:req.body.email})
 console.log(user)
